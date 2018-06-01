@@ -23,13 +23,20 @@ $(function() {
   // 本処理
   $("#submit").on("click", function() {
     var input = $("#keyword").val();
+    // console.log(input);
     // 問題5-①：配列の作成
     var inputs = input.split(" ");
+    // console.log(inputs);
     // 問題5-②：さらに加工して配列を作成
     // 引数で、要素の頭に『^』を付ける関数を渡す。
     var newInputs = inputs.map(editElement);
+    // console.log(newInputs);
     // 問題5-③：配列の要素をさらに加工して配列を作成
     var reg = RegExp(newInputs.join("|"))
+    // console.log(newInputs.join("|"));
+    // console.log(RegExp());
+    // console.log(reg);
+
 
     $(".list").remove();
 

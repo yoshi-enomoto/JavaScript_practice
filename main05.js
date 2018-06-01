@@ -8,6 +8,11 @@ $(function() {
     for (var i = 0; i < fruits.length; i++ ) {
       if (fruits[i] == input ) {
         $("#result").text(input);
+        // この書き方でも、『return false;』があれば、問題３までは解答と同様に動く模様。
+        return false;
+      } else {
+        // 問題3の回答
+        $("#result").text("検索結果該当なし");
       }
     }
     // 問題2の模範解答
@@ -19,11 +24,12 @@ $(function() {
         $("#result").text(input);
         // 一致するものが見つかったらそのあとは繰り返さなくて良いので『false』を返す。
         return false;
+      } else {
+        // 問題3の模範解答
+        $("#result").text("一致する果物はありませんでした。");
       }
     });
 
 
   });
-
-
 })

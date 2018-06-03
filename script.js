@@ -11,6 +11,12 @@ $(function() {
     // 文字列の結合は『+』が必要
     $.ajax("http://api.openweathermap.org/data/2.5/weather?APPID="+ API_KEY + "&q=" + cityName);
     // $.ajax("http://api.openweathermap.org/data/2.5/weather?APPID=<API Key>&q=<都市名>")
+      .done(function() {
+        // 通信成功時の処理
+      });
+      .fail(function() {
+        // 通信失敗時の処理
+      });
     e.preventDefault();
   });
 });

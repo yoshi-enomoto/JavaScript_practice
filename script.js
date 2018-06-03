@@ -7,6 +7,7 @@ $(function() {
   $("#weather-form").on("submit", function(e) {
     // ユーザーの入力値の取得
     var cityName = $(this).find("#weather-form-city").prop("value");
+    $.ajax("http://api.openweathermap.org/data/2.5/weather?APPID=<API Key>&q=<都市名>")
     e.preventDefault();
   });
 });

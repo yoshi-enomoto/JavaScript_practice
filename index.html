@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
+    <style>
+    #form-spinner, #form-error, #form-result {
+      display: none;
+    }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+    <title>JS Weather API Sample</title>
+  </head>
+  <body>
+    <br>
+    <a href="javascript:history.back()">back</a>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h1 class="panel-title">JS Weather API Sample</h1>
+            </div>
+            <div class="panel-body">
+              <form class="form-inline" id="weather-form">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="City name" id="weather-form-city">
+                </div>
+                <button type="submit" class="btn btn-primary">Send</button>
+                <i class="fa fa-spinner fa-spin" id="form-spinner" aria-hidden="true"></i>
+              </form>
+              <div class="alert alert-danger" id="form-error">
+                <p>
+                  The city name you entered above is invalid.<br>
+                  Edit it and try again.
+                </p>
+              </div>
+              <div class="alert alert-info" id="form-result">
+                <p>
+                  The weather in <b id="result-city-name"></b> is <b id="result-weather"></b>.<br>
+                  The temperature is <b id="result-temp"></b>°C.<br>
+                  <span id="result-datetime"></span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
